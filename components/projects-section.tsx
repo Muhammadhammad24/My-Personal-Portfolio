@@ -47,7 +47,7 @@ const projects: Project[] = [
       "Real-time chat interface with comprehensive error handling",
       "Containerized deployment with Docker and auto-documentation"
     ],
-    github: "https://github.com/Muhammadhammad24/helpdesk-automation"
+    github: "https://github.com/Muhammadhammad24/Infotech-Wizard"
   },
   {
   title: "Neural Network Function Approximation",
