@@ -5,103 +5,127 @@ import { useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Monitor, Shield, Cloud, Network, Code, Settings, Users, Zap, Award, Server } from "lucide-react"
+import { Monitor, Shield, Cloud, Network, Code, Settings, Users, Zap, Award, Server, Database, Bot } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Operating Systems",
+    title: "Operating Systems & Server Platforms",
     icon: Monitor,
     color: "from-blue-500 to-cyan-600",
     skills: [
       { name: "Windows 10/11", level: 95 },
-      { name: "Windows Server 2019/2022", level: 90 },
-      { name: "Linux (Ubuntu/CentOS)", level: 85 },
-      { name: "macOS", level: 80 },
-      { name: "iOS/Android", level: 85 },
+      { name: "Windows Server (2016/2019/2022)", level: 92 },
+      { name: "Linux (Ubuntu/CentOS/RHEL)", level: 88 },
+      { name: "VMware ESXi", level: 85 },
+      { name: "macOS/iOS/iPadOS/Android", level: 85 },
     ],
   },
   {
-    title: "Security & Compliance",
+    title: "Cybersecurity & Compliance",
     icon: Shield,
     color: "from-green-500 to-emerald-600",
     skills: [
-      { name: "Microsoft Defender", level: 95 },
-      { name: "Endpoint Protection", level: 90 },
-      { name: "GDPR Compliance", level: 85 },
-      { name: "Vulnerability Management", level: 88 },
-      { name: "Incident Response", level: 90 },
+      { name: "CrowdStrike Endpoint Security", level: 92 },
+      { name: "Palo Alto Prisma", level: 88 },
+      { name: "Splunk Enterprise Security", level: 90 },
+      { name: "Zero Trust Architecture", level: 85 },
+      { name: "GDPR/HIPAA Compliance", level: 88 },
     ],
   },
   {
-    title: "Cloud & Virtualization",
+    title: "Cloud Infrastructure & Virtualization",
     icon: Cloud,
     color: "from-purple-500 to-violet-600",
     skills: [
-      { name: "Microsoft Azure", level: 90 },
-      { name: "Microsoft 365 Admin", level: 95 },
-      { name: "VMware vSphere", level: 85 },
-      { name: "Hyper-V", level: 80 },
-      { name: "AWS (Basics)", level: 75 },
+      { name: "Microsoft Azure", level: 92 },
+      { name: "AWS (Amazon Web Services)", level: 88 },
+      { name: "Google Cloud Platform", level: 85 },
+      { name: "VMware vSphere/ESXi", level: 90 },
+      { name: "Azure Virtual Desktop", level: 88 },
     ],
   },
   {
-    title: "System Administration",
+    title: "System Administration & Domain Management",
     icon: Server,
     color: "from-orange-500 to-red-600",
     skills: [
       { name: "Active Directory", level: 95 },
-      { name: "Azure AD/Entra ID", level: 90 },
-      { name: "Microsoft Intune", level: 88 },
-      { name: "Group Policy", level: 92 },
-      { name: "Exchange Online", level: 85 },
+      { name: "Azure AD/Entra ID", level: 92 },
+      { name: "Group Policy Management", level: 90 },
+      { name: "Exchange Online", level: 88 },
+      { name: "WSUS & Patch Management", level: 85 },
     ],
   },
   {
-    title: "Network & Monitoring",
+    title: "Network Administration & Infrastructure",
     icon: Network,
     color: "from-teal-500 to-green-600",
     skills: [
-      { name: "PRTG Network Monitor", level: 90 },
-      { name: "SolarWinds", level: 85 },
-      { name: "TCP/IP", level: 88 },
-      { name: "VPN Configuration", level: 85 },
-      { name: "Wireshark", level: 80 },
+      { name: "TCP/IP, VLAN, DNS/DHCP", level: 90 },
+      { name: "Cisco Meraki", level: 85 },
+      { name: "Cisco/Juniper Routers/Switches", level: 88 },
+      { name: "pfSense/SonicWall/Fortinet", level: 90 },
+      { name: "VPN & Wi-Fi 6/7", level: 88 },
     ],
   },
   {
-    title: "Automation & Scripting",
+    title: "IT Automation & Scripting",
     icon: Code,
     color: "from-indigo-500 to-purple-600",
     skills: [
-      { name: "PowerShell", level: 92 },
-      { name: "Python (Basics)", level: 70 },
-      { name: "Bash Scripting", level: 75 },
-      { name: "Power Automate", level: 85 },
-      { name: "Task Automation", level: 90 },
+      { name: "PowerShell", level: 95 },
+      { name: "Python", level: 88 },
+      { name: "Bash/Batch Scripting", level: 85 },
+      { name: "Power Automate", level: 90 },
+      { name: "Terraform/Ansible", level: 85 },
     ],
   },
   {
-    title: "ITSM & Support Tools",
+    title: "Container & DevOps Technologies",
+    icon: Bot,
+    color: "from-cyan-500 to-blue-600",
+    skills: [
+      { name: "Docker", level: 88 },
+      { name: "Kubernetes", level: 85 },
+      { name: "YAML Configuration", level: 90 },
+      { name: "Infrastructure as Code", level: 88 },
+      { name: "CI/CD Pipelines", level: 80 },
+    ],
+  },
+  {
+    title: "Device Management & Endpoint Security",
     icon: Settings,
     color: "from-pink-500 to-rose-600",
     skills: [
-      { name: "ServiceNow", level: 90 },
-      { name: "Jira Service Management", level: 85 },
-      { name: "Zendesk", level: 88 },
-      { name: "ITIL 4 Framework", level: 85 },
-      { name: "Asset Management", level: 90 },
+      { name: "Microsoft Intune", level: 92 },
+      { name: "SCCM", level: 88 },
+      { name: "Autopilot", level: 90 },
+      { name: "VMware Workspace ONE UEM", level: 85 },
+      { name: "Jamf Pro/Kandji (macOS)", level: 85 },
     ],
   },
   {
-    title: "Collaboration Platforms",
+    title: "IT Service Management & Ticketing",
+    icon: Database,
+    color: "from-violet-500 to-purple-600",
+    skills: [
+      { name: "ServiceNow", level: 92 },
+      { name: "Jira Service Management", level: 88 },
+      { name: "Zendesk", level: 85 },
+      { name: "ITIL 4 Framework", level: 90 },
+      { name: "Freshservice", level: 85 },
+    ],
+  },
+  {
+    title: "System Monitoring & Performance",
     icon: Users,
     color: "from-yellow-500 to-orange-600",
     skills: [
-      { name: "Microsoft Teams", level: 95 },
-      { name: "SharePoint", level: 90 },
-      { name: "Google Workspace", level: 85 },
-      { name: "Zoom", level: 88 },
-      { name: "Slack", level: 80 },
+      { name: "PRTG Network Monitor", level: 90 },
+      { name: "SolarWinds", level: 88 },
+      { name: "Datadog", level: 85 },
+      { name: "Splunk Enterprise", level: 90 },
+      { name: "Wireshark", level: 85 },
     ],
   },
 ]
@@ -114,9 +138,9 @@ const certifications = [
     color: "text-green-600",
   },
   {
-    name: "HDI Support Center Analyst",
-    issuer: "HDI",
-    icon: Users,
+    name: "System Administration and IT Infrastructure Services",
+    issuer: "Google",
+    icon: Cloud,
     color: "text-blue-600",
   },
   {
@@ -126,22 +150,34 @@ const certifications = [
     color: "text-red-600",
   },
   {
-    name: "Linux Essentials - Linux Administration",
-    issuer: "Linux Professional Institute",
-    icon: Monitor,
-    color: "text-orange-600",
-  },
-  {
     name: "Windows Server Fundamentals",
     issuer: "Microsoft",
     icon: Server,
     color: "text-purple-600",
   },
   {
-    name: "System Administration and IT Infrastructure Services",
-    issuer: "Google",
-    icon: Cloud,
+    name: "HDI Support Center Analyst - Help Desk Best Practices",
+    issuer: "HDI",
+    icon: Users,
+    color: "text-orange-600",
+  },
+  {
+    name: "Linux Essentials - Linux Administration",
+    issuer: "Linux Professional Institute",
+    icon: Monitor,
     color: "text-teal-600",
+  },
+  {
+    name: "Discovering Computer Networks",
+    issuer: "Open Networking Lab",
+    icon: Network,
+    color: "text-cyan-600",
+  },
+  {
+    name: "Successful IT Systems",
+    issuer: "IT Systems Institute",
+    icon: Settings,
+    color: "text-indigo-600",
   },
 ]
 
@@ -187,10 +223,11 @@ export default function SkillsSection() {
               Technical Expertise
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-balance">
-              Skills & <span className="text-primary">Technologies</span>
+              Enterprise-Grade <span className="text-primary">Technical Skills</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-              A comprehensive overview of my technical skills, certifications, and expertise across various IT domains.
+              Comprehensive expertise in modern IT infrastructure, cloud technologies, automation, and enterprise security solutions 
+              across 500+ endpoints and $2.3M+ infrastructure environments.
             </p>
           </motion.div>
 
@@ -206,12 +243,12 @@ export default function SkillsSection() {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-foreground mb-4">Professional Certifications</h3>
               <p className="text-muted-foreground">
-                Industry-recognized certifications that validate my expertise and commitment to professional
-                development.
+                Industry-recognized certifications validating expertise in IT service management, 
+                cloud infrastructure, and enterprise security solutions.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
@@ -230,6 +267,24 @@ export default function SkillsSection() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Technical Highlights */}
+          <motion.div variants={itemVariants} className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-sm text-muted-foreground">Technology Categories</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">95%+</div>
+                <div className="text-sm text-muted-foreground">Automated Resolution</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">8</div>
+                <div className="text-sm text-muted-foreground">Professional Certifications</div>
+              </div>
             </div>
           </motion.div>
         </motion.div>

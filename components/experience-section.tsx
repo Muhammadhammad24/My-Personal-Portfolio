@@ -9,37 +9,21 @@ import { Building2, Calendar, MapPin, Shield, Server, Users, Zap, CheckCircle, T
 const experiences = [
   {
     company: "Kontinental Establishment",
-    location: "United States (Remote)",
-    position: "IT Support & Administrator Specialist",
-    type: "Remote, Part-time",
-    period: "Mar 2023 to Dec 2024",
+    location: "New York, United States",
+    position: "IT Support & Administration Specialist",
+    type: "Remote",
+    period: "Apr 2023 - Present",
     icon: Shield,
+    companyIcon: "/icons/kontinental.jpg",
     color: "from-green-500 to-emerald-600",
     achievements: [
-      "Implemented security protocols achieving 99.5% security compliance",
-      "Managed cloud security for AWS and Azure environments",
-      "Improved cloud infrastructure security posture by 85%",
-      "Reduced security incidents by 70% through endpoint protection",
-      "Developed incident response procedures with 4-hour RTO",
+      "Managed cloud infrastructure across Azure, AWS, Google Cloud Platform with Docker/Kubernetes, Terraform/Ansible cutting deployment time from 6 hours to 90 minutes",
+      "Configured Zero Trust security using CrowdStrike, Okta MFA/SSO, Splunk Enterprise Security achieving 99.2% threat detection accuracy",
+      "Developed automation scripts in PowerShell, Python, Power Automate for $2.3M+ infrastructure saving 25 hours/week manual work",
+      "Administered 190+ endpoints via Intune, Autopilot, Jamf Pro cutting setup time by 75% from 3 hours to 25 minutes",
+      "Deployed monitoring via Datadog, New Relic, Splunk maintaining 99.7% uptime and 100% SLA compliance"
     ],
-    technologies: ["AWS", "Azure", "Endpoint Protection", "VPN", "IDS/IPS", "Disaster Recovery"],
-  },
-  {
-    company: "Kontinental Establishment",
-    location: "Karachi, Pakistan",
-    position: "IT Support Engineer",
-    type: "Remote",
-    period: "Apr 2023 to Mar 2024",
-    icon: Server,
-    color: "from-blue-500 to-cyan-600",
-    achievements: [
-      "Managed 500+ IT support tickets monthly with 95% first-call resolution",
-      "Administered 200+ endpoint devices using Microsoft Intune and Jamf Pro",
-      "Reduced new user setup time by 75% through automation",
-      "Achieved 99.5% inventory accuracy tracking $2.5M+ in hardware",
-      "Saved 25 hours/week through PowerShell automation workflows",
-    ],
-    technologies: ["ServiceNow", "Microsoft Intune", "Jamf Pro", "PowerShell", "TeamViewer", "SCCM"],
+    technologies: ["Azure", "AWS", "GCP", "Docker", "Kubernetes", "Terraform", "Ansible", "CrowdStrike", "Okta", "Splunk", "PowerShell", "Python"]
   },
   {
     company: "Liberty Books (Pvt.) Ltd",
@@ -48,15 +32,16 @@ const experiences = [
     type: "Full-time",
     period: "June 2022 to Oct 2022",
     icon: Users,
+    companyIcon: "/icons/libertybooks.svg",
     color: "from-purple-500 to-violet-600",
     achievements: [
-      "Provided Level 1 & 2 support for 180+ Windows workstations",
-      "Maintained 98.5% system uptime with 15-minute average response time",
-      "Achieved 90% user adoption rate for new collaboration platforms",
-      "Reduced security incidents by 60% through Microsoft Defender deployment",
-      "Improved asset tracking accuracy by 85% using automated discovery",
+      "Managed international device ecosystem via SCCM, MDT, VMware Workspace ONE UEM for 520+ Windows 10/11 workstations across 18 countries",
+      "Deployed M365 (Teams/SharePoint/OneDrive/Outlook), Google Workspace for 520+ users achieving 90% adoption rate and 43% productivity improvement",
+      "Engineered mobile device management via Intune, MDM for 520+ iOS/iPadOS/Android devices cutting setup time by 71%",
+      "Streamlined ITSM operations via Freshservice, Jira Service Management processing 1,200+ monthly tickets at 94% resolution rate",
+      "Maintained GDPR/HIPAA compliance for $3.2M asset portfolio achieving 100% compliance and 85% asset tracking accuracy"
     ],
-    technologies: ["Microsoft 365", "SharePoint", "Google Workspace", "Spiceworks", "ITIL 4"],
+    technologies: ["SCCM", "MDT", "VMware Workspace ONE", "M365", "Google Workspace", "Intune", "Freshservice", "Jira SM", "ITIL 4"]
   },
   {
     company: "KTDMC",
@@ -65,15 +50,16 @@ const experiences = [
     type: "Full-time",
     period: "Oct 2021 to May 2022",
     icon: Building2,
+    companyIcon: "/icons/ktdmc.svg",
     color: "from-orange-500 to-red-600",
     achievements: [
-      "Administered Active Directory for 250+ users with 100% patch compliance",
-      "Reduced unauthorized access attempts by 80% through security policies",
-      "Achieved 95% successful deployment rate using SCCM and MDT",
-      "Improved data protection compliance by 90% with mobile device management",
-      "Maintained 99.8% network uptime through proactive monitoring",
+      "Architected virtualized infrastructure with VMware vSphere/ESXi, Hyper-V for 265+ government endpoints achieving 95% deployment success",
+      "Built network infrastructure leveraging Cisco/Juniper routers/switches, Cisco Meraki wireless cutting unauthorized access by 80%",
+      "Deployed monitoring via PRTG Network Monitor, SolarWinds maintaining 99.8% uptime and cutting troubleshooting time from 4 hours to 90 minutes",
+      "Protected $1.2M+ government data through Veeam, Acronis achieving 4-hour RTO and 100% backup success rate",
+      "Administered hybrid identity management using AD, Azure AD for 265+ accounts cutting provisioning from 2 hours to 20 minutes"
     ],
-    technologies: ["Active Directory", "Azure AD", "SCCM", "PRTG", "VMware", "Microsoft Intune"],
+    technologies: ["VMware vSphere", "Hyper-V", "Cisco Meraki", "pfSense", "PRTG", "SolarWinds", "Veeam", "Active Directory", "Azure AD"]
   },
   {
     company: "Target Logistics International (Pvt.) Ltd",
@@ -81,34 +67,36 @@ const experiences = [
     position: "IT Support Specialist",
     type: "Full-time",
     period: "July 2020 to Sept 2021",
-    icon: TrendingUp,
+    icon: "/icons/targetlogistics.svg",
+    companyIcon: "/icons/targetlogistics.svg",
     color: "from-teal-500 to-green-600",
     achievements: [
-      "Managed help desk operations with 92% user satisfaction rate",
-      "Coordinated hardware procurement worth $500K+ with lifecycle management",
-      "Achieved 100% backup success rate using Veeam and Acronis",
-      "Improved network performance by 25% across 3 office locations",
-      "Extended hardware lifespan by 30% through predictive maintenance",
+      "Operated help desk via ManageEngine ServiceDesk processing 285+ monthly tickets with 92% satisfaction cutting resolution time from 6 hours to 2.5 hours",
+      "Coordinated $420K+ hardware lifecycle through ManageEngine AssetExplorer extending hardware lifespan by 30%",
+      "Deployed backup using Veeam, Acronis for 25+ critical servers with 100% backup success across 3 office locations",
+      "Implemented SolarWinds NPM, ManageEngine OpManager handling 180+ annual changes boosting network performance by 25%",
+      "Configured Task Scheduler workflows for 45+ routine tasks across 155+ devices supporting desktop/laptop diagnostics"
     ],
-    technologies: ["ServiceDesk Plus", "Veeam", "VMware vSphere", "SolarWinds", "Asset Management"],
+    technologies: ["ManageEngine ServiceDesk", "ManageEngine AssetExplorer", "Veeam", "Acronis", "SolarWinds NPM", "VMware vSphere", "Task Scheduler"]
   },
   {
     company: "The Active Solutions",
     location: "Karachi, Pakistan",
-    position: "IT Support Engineer",
+    position: "IT Engineer",
     type: "Full-time",
     period: "Apr 2019 to Feb 2020",
     icon: Zap,
+    companyIcon: "/icons/activesolution.svg",
     color: "from-indigo-500 to-purple-600",
     achievements: [
-      "Provided comprehensive end-user support with 96% user satisfaction",
-      "Supported IT infrastructure projects with 15% performance improvement",
-      "Reduced training time for new employees by 40% through documentation",
-      "Improved system response time by 30% through network monitoring",
-      "Prevented 12+ potential system failures through proactive monitoring",
+      "Delivered L1/L2/L3 support via osTicket, TeamViewer for 125+ Windows 10 workstations maintaining 96% user satisfaction",
+      "Supported infrastructure projects using VMware vSphere, VirtualBox improving system performance by 15%",
+      "Created technical documentation via SharePoint Online, Confluence developing 50+ procedures reducing training time by 40%",
+      "Implemented network monitoring through ManageEngine OpManager, Nagios improving response time by 30%",
+      "Performed desktop/laptop diagnostics on 125+ devices including 15+ macOS systems implementing Bash/Batch scripting for 20+ routine tasks"
     ],
-    technologies: ["VMware", "Azure", "SharePoint", "OpManager", "Network Monitoring"],
-  },
+    technologies: ["osTicket", "TeamViewer", "VMware vSphere", "SharePoint", "Confluence", "ManageEngine OpManager", "Nagios", "Bash/Batch"]
+  }
 ]
 
 export default function ExperienceSection() {
@@ -136,11 +124,11 @@ export default function ExperienceSection() {
             Professional Experience
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-balance">
-            My Journey Through <span className="text-primary">IT Security & Systems</span>
+            My Journey Through <span className="text-primary">Enterprise IT Operations</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            From help desk operations to enterprise security engineering, here's how I've grown and delivered impact
-            across different organizations and technologies.
+            5+ years of hands-on experience managing enterprise infrastructure, cloud platforms, and security operations 
+            across multiple organizations serving 500+ endpoints and $2.3M+ in technology assets.
           </p>
         </motion.div>
 
@@ -204,13 +192,15 @@ function ExperienceItem({
           <CardContent className="p-6 space-y-4">
             {/* Header */}
             <div className="flex items-start gap-4">
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-                className={`p-3 rounded-lg bg-gradient-to-r ${experience.color} text-white flex-shrink-0`}
-              >
-                <experience.icon className="w-6 h-6" />
-              </motion.div>
+              {/* Company Logo */}
+              <div className="w-12 h-12 rounded-lg border border-border flex items-center justify-center bg-white p-1">
+                <img
+                  src={experience.companyIcon}
+                  alt={`${experience.company} logo`}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
 
               <div className="flex-1 min-w-0">
                 <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">

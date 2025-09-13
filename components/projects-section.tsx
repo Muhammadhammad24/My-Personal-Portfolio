@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Shield, Server, Cloud, Zap, Award, Settings, Monitor } from "lucide-react"
+import { ExternalLink, Github, Shield, Server, Cloud, Zap, Award, Settings, Monitor, Bot, Brain } from "lucide-react"
 
 type Project = {
   title: string
@@ -21,144 +21,203 @@ type Project = {
 
 const projects: Project[] = [
   {
-  title: "AI-Powered IT Support Chatbot",
-  description:
-    "Developed an enterprise-grade IT Support Chatbot system (InfoTech Wizard) with a FastAPI backend and React frontend, enabling automated query handling, real-time chat, and integration with AI/ML models for intelligent responses.",
-  icon: Monitor, // you can also use Zap or Cloud depending on your theme
-  color: "from-sky-500 to-indigo-600",
-  impact: "Production-ready architecture with minor optimizations",
-  technologies: [
-    "FastAPI",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Docker",
-    "PyTorch",
-    "Sentence-Transformers",
-    "FAISS",
-    "Pydantic"
-  ],
-  category: "AI & Automation",
-  features: [
-    "Retrieval-Augmented Generation (RAG) pipeline",
-    "Containerized deployment with Docker",
-    "Real-time chat interface with error handling",
-    "Secure input validation and content filtering"
-  ],
-  github: "https://github.com/yourusername/infotech-wizard" // replace with actual repo
-},
-  {
-    title: "IT Support Troubleshooting and Automation",
+    
+    title: "InfoTech Wizard - AI IT Support Chatbot",
     description:
-      "Engineered comprehensive PowerShell-based diagnostic frameworks and automated resolution workflows, integrating ServiceNow APIs with intelligent ticket routing systems.",
-    icon: Zap,
+      "Built enterprise-grade IT Support Chatbot with FastAPI backend and React frontend, implementing Retrieval-Augmented Generation (RAG) pipeline using FAISS vector search, HuggingFace Transformers, and PyTorch for intelligent automated query handling and real-time chat interface.",
+    icon: Bot,
     color: "from-blue-500 to-cyan-600",
-    impact: "70% reduction in manual interventions",
-    technologies: ["PowerShell", "ServiceNow API", "Automation", "Diagnostics"],
-    category: "Automation",
-    features: [
-      "Automated ticket routing and prioritization",
-      "PowerShell diagnostic frameworks",
-      "ServiceNow API integration",
-      "Intelligent resolution workflows",
+    impact: "Production-ready architecture with intelligent automation",
+    technologies: [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PyTorch",
+      "HuggingFace Transformers",
+      "FAISS Vector Search",
+      "Sentence-Transformers",
+      "Docker",
+      "Pydantic",
+      "RAG Architecture"
     ],
-    github: "https://github.com/yourusername/it-support-automation",
+    category: "AI & Automation",
+    features: [
+      "Retrieval-Augmented Generation (RAG) pipeline with FAISS vector search",
+      "Multi-model support via HuggingFace Transformers ecosystem",
+      "Real-time chat interface with comprehensive error handling",
+      "Containerized deployment with Docker and auto-documentation"
+    ],
+    github: "https://github.com/Muhammadhammad24/helpdesk-automation"
   },
   {
-    title: "Active Directory Management Automation",
+  title: "Neural Network Function Approximation",
     description:
-      "Architected enterprise-scale user provisioning systems with PowerShell DSC, implemented advanced Group Policy automation, and designed seamless Azure AD Connect hybrid identity solutions.",
+      "Advanced academic research project implementing optimal ReLU neural network approximation algorithms across multiple deep learning frameworks. Focused on theoretical convergence analysis for convex/non-convex functions with mathematical validation and performance benchmarking.",
+    icon: Brain,
+    color: "from-indigo-500 to-purple-600",
+    impact: "Academic research with theoretical validation",
+    technologies: [
+      "PyTorch",
+      "JAX", 
+      "TensorFlow",
+      "Tinygrad",
+      "Hugging Face",
+      "Physics-Informed Neural Networks",
+      "ReLU Activation",
+      "Mathematical Modeling",
+      "Numerical Analysis"
+    ],
+    category: "AI & Machine Learning Research",
+    features: [
+      "Multi-framework implementation (PyTorch, JAX, TensorFlow, Tinygrad)",
+      "Optimal function approximation with guaranteed convergence rates",
+      "Physics-informed neural networks with equation regularizers",
+      "Comparative analysis of Axon algorithm vs ReLU approximation methods"
+    ],
+    github: "https://github.com/Muhammadhammad24/nnapprox"
+  },
+  
+  {
+   
+    title: "AD Management Automation",
+    description:
+      "Designed enterprise-scale user provisioning through PowerShell DSC, automated Group Policy management and Azure AD Connect hybrid identity solutions with MFA/SSO integration for streamlined cloud operations.",
     icon: Server,
     color: "from-green-500 to-emerald-600",
-    impact: "Streamlined cloud integration",
-    technologies: ["PowerShell DSC", "Active Directory", "Azure AD Connect", "Group Policy"],
+    impact: "Streamlined hybrid cloud identity operations",
+    technologies: [
+      "PowerShell DSC",
+      "Azure AD Connect",
+      "Group Policy",
+      "MFA/SSO",
+      "Hybrid Identity",
+      "Active Directory",
+      "Azure Entra ID"
+    ],
     category: "Identity Management",
     features: [
-      "Enterprise-scale user provisioning",
-      "Advanced Group Policy automation",
-      "Hybrid identity solutions",
-      "Seamless cloud integration",
+      "PowerShell DSC automated user provisioning",
+      "Azure AD Connect hybrid identity solutions",
+      "Advanced Group Policy management automation",
+      "MFA/SSO integration for cloud operations"
     ],
-    github: "https://github.com/yourusername/ad-management-automation",
+    github: "https://github.com/Muhammadhammad24/ad-management"
   },
   {
     title: "Cloud Automation and Virtualization",
     description:
-      "Orchestrated multi-cloud infrastructure deployment using cutting-edge automation tools, containerized mission-critical applications with Docker/Kubernetes, and implemented Infrastructure as Code methodologies.",
+      "Deployed VMware vSphere/Azure/AWS infrastructure via Terraform/Ansible, containerized applications with Docker/Kubernetes while establishing Infrastructure as Code through YAML configuration management.",
     icon: Cloud,
     color: "from-purple-500 to-violet-600",
-    impact: "Multi-cloud infrastructure deployment",
-    technologies: ["Docker", "Kubernetes", "Infrastructure as Code", "Multi-Cloud"],
+    impact: "Multi-cloud infrastructure deployment efficiency",
+    technologies: [
+      "VMware vSphere",
+      "Azure",
+      "AWS",
+      "Terraform",
+      "Ansible",
+      "Docker",
+      "Kubernetes",
+      "YAML",
+      "Infrastructure as Code"
+    ],
     category: "Cloud Infrastructure",
     features: [
-      "Multi-cloud infrastructure orchestration",
-      "Container deployment strategies",
-      "Infrastructure as Code implementation",
-      "Mission-critical application containerization",
+      "Multi-cloud infrastructure orchestration via Terraform",
+      "Container deployment with Docker/Kubernetes",
+      "Infrastructure as Code through YAML configuration",
+      "VMware vSphere virtualization management"
     ],
-    github: "https://github.com/yourusername/cloud-automation",
+    github: "https://github.com/Muhammadhammad24/cloud-virtualization-project"
   },
   {
-    title: "pfSense Firewall Lab Setup",
+    title: "pfSense Firewall Lab Setup (VirtualBox)",
     description:
-      "Configured advanced enterprise-grade network security laboratory featuring high-availability firewall clusters, sophisticated VPN tunneling protocols, VLAN segmentation strategies, and comprehensive network traffic analysis.",
+      "Built comprehensive network security laboratory with pfSense firewall clusters, VPN protocols, VLAN segmentation, TCP/IP routing, and SNMP monitoring plus Wireshark traffic analysis for enterprise security testing.",
     icon: Shield,
     color: "from-orange-500 to-red-600",
-    impact: "Enterprise-grade security lab",
-    technologies: ["pfSense", "VPN", "VLAN", "Network Security", "VirtualBox"],
+    impact: "Enterprise-grade security lab environment",
+    technologies: [
+      "pfSense",
+      "VirtualBox",
+      "VPN Protocols",
+      "VLAN Segmentation",
+      "TCP/IP Routing",
+      "SNMP Monitoring",
+      "Wireshark",
+      "Network Security"
+    ],
     category: "Network Security",
     features: [
-      "High-availability firewall clusters",
-      "Advanced VPN tunneling protocols",
-      "VLAN segmentation strategies",
-      "Comprehensive traffic analysis",
+      "High-availability pfSense firewall clusters",
+      "Advanced VPN tunneling protocols configuration",
+      "VLAN segmentation and TCP/IP routing",
+      "Comprehensive Wireshark traffic analysis"
     ],
-    github: "https://github.com/yourusername/pfsense-lab",
+    github: "https://github.com/Muhammadhammad24/pfSense-Firewall-Lab"
   },
   {
     title: "ITSM Self-Service Portal",
     description:
-      "Developed intelligent knowledge-driven support ecosystem using modern web technologies, integrated AI-powered assistance capabilities, and implemented smart workflow automation.",
+      "Created comprehensive SharePoint knowledge platform with M365 integration, developed Power Automate workflows and AI-powered assistance cutting ticket volume by 45% through intelligent self-service capabilities.",
     icon: Settings,
     color: "from-teal-500 to-green-600",
-    impact: "45% ticket volume reduction",
-    technologies: ["Web Technologies", "AI Integration", "Workflow Automation", "Knowledge Base"],
+    impact: "45% reduction in ticket volume",
+    technologies: [
+      "SharePoint",
+      "M365 Integration",
+      "Power Automate",
+      "AI-Powered Assistance",
+      "Knowledge Management",
+      "Workflow Automation",
+      "Self-Service Portal"
+    ],
     category: "Service Management",
     features: [
-      "AI-powered assistance capabilities",
-      "Smart workflow automation",
-      "Knowledge-driven support ecosystem",
-      "Enhanced user experience design",
+      "SharePoint knowledge platform with M365 integration",
+      "Power Automate workflow automation",
+      "AI-powered assistance for intelligent responses",
+      "Self-service capabilities reducing manual tickets"
     ],
-    github: "https://github.com/yourusername/itsm-portal",
+    github: "https://github.com/Muhammadhammad24/itsm-portal"
   },
   {
     title: "Vulnerability Scanning with OpenVAS",
     description:
-      "Deployed enterprise-grade security assessment infrastructure featuring automated vulnerability management pipelines, proactive threat detection mechanisms, and comprehensive compliance monitoring dashboards.",
+      "Established comprehensive security assessment infrastructure with automated vulnerability management, Defender/Splunk monitoring, and Zero Trust compliance dashboards for continuous security improvement.",
     icon: Monitor,
-    color: "from-indigo-500 to-purple-600",
+    color: "from-red-500 to-pink-600",
     impact: "Continuous security posture improvement",
-    technologies: ["OpenVAS", "Vulnerability Management", "Threat Detection", "Compliance"],
+    technologies: [
+      "OpenVAS",
+      "Vulnerability Management",
+      "Defender",
+      "Splunk Monitoring",
+      "Zero Trust",
+      "Compliance Dashboards",
+      "Security Assessment",
+      "Threat Detection"
+    ],
     category: "Security Assessment",
     features: [
       "Automated vulnerability management pipelines",
-      "Proactive threat detection mechanisms",
-      "Comprehensive compliance monitoring",
-      "Security posture improvement dashboards",
+      "Defender/Splunk security monitoring integration",
+      "Zero Trust compliance dashboards",
+      "Continuous security posture assessment"
     ],
-    github: "https://github.com/yourusername/openvas-pipeline",
-  },
+    github: "https://github.com/Muhammadhammad24/Vulnerability-Scanning-with-OpenVAS"
+  }
 ]
 
 const categories = [
   "All",
-  "Automation",
-  "Identity Management",
+  "AI & Machine Learning Research",
+  "AI & Automation",
+  "Identity Management", 
   "Cloud Infrastructure",
   "Network Security",
   "Service Management",
-  "Security Assessment",
+  "Security Assessment"
 ]
 
 export default function ProjectsSection() {
@@ -198,11 +257,11 @@ export default function ProjectsSection() {
               Featured Projects
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-balance">
-              Relevant <span className="text-primary">Projects &amp; Solutions</span>
+              Enterprise <span className="text-primary">IT Solutions & Automation</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-              A showcase of innovative IT solutions, automation projects, and security implementations that demonstrate
-              my technical expertise and problem-solving capabilities.
+              Real-world implementations of AI-driven IT operations, cloud infrastructure automation, and enterprise security solutions 
+              that demonstrate expertise in modern IT service management and infrastructure optimization.
             </p>
           </motion.div>
 
@@ -216,34 +275,33 @@ export default function ProjectsSection() {
           {/* Call to Action */}
           <motion.div variants={itemVariants} className="text-center space-y-6">
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Interested in My Work?</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Transform Your IT Operations?</h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                I'm always excited to discuss new opportunities, share insights about IT security and automation, or
-                collaborate on innovative projects. Let's connect and explore how we can work together.
+                Specializing in AI-driven automation, cloud infrastructure optimization, and enterprise security solutions. 
+                Let's discuss how these proven methodologies can revolutionize your technology operations.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                {/* GitHub CTA with green border to match theme */}
                 <Button
                   size="lg"
                   variant="outline"
-                  className="group bg-transparent border-green-500 text-green-600 hover:bg-green-50 dark:hover:bg-green-950/20"
+                  className="group bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   asChild
                 >
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/Muhammadhammad24"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View my GitHub profile"
                     className="flex items-center"
                   >
                     <Github className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                    View GitHub
+                    View All Projects
                   </a>
                 </Button>
 
                 <Button variant="outline" size="lg" className="group bg-transparent" asChild>
                   <a
-                    href="https://www.linkedin.com/in/yourprofile"
+                    href="https://linkedin.com/in/mhammad24"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View my LinkedIn profile"
@@ -317,7 +375,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               </ul>
             </div>
 
-            {/* Render ALL technologies (not just three) */}
             <div className="flex flex-wrap gap-1">
               {project.technologies.map((tech) => (
                 <Badge key={tech} variant="secondary" className="text-xs">
@@ -327,15 +384,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </div>
           </div>
 
-          {/* GitHub button with green border to match theme */}
           {project.github && (
             <div className="pt-2">
               <Button
-  asChild
-  variant="outline"
-  size="sm"
-  className="group w-full justify-center border-primary text-primary hover:bg-primary dark:hover:bg-primary"
->
+                asChild
+                variant="outline"
+                size="sm"
+                className="group w-full justify-center border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 <a
                   href={project.github}
                   target="_blank"
@@ -344,7 +400,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   className="flex items-center"
                 >
                   <Github className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  GitHub
+                  View Code
                 </a>
               </Button>
             </div>

@@ -23,6 +23,7 @@ import {
   Globe,
   CheckCircle,
   Calendar,
+  ExternalLink,
 } from "lucide-react"
 
 const contactInfo = [
@@ -50,21 +51,28 @@ const contactInfo = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/Hammad",
+    value: "linkedin.com/in/mhammad24",
     href: "https://linkedin.com/in/mhammad24",
     color: "text-blue-700",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/Hammad",
-    href: "https://github.com/MuhammadHammad24",
+    value: "github.com/Muhammadhammad24",
+    href: "https://github.com/Muhammadhammad24",
     color: "text-gray-700",
+  },
+  {
+    icon: ExternalLink,
+    label: "Portfolio",
+    value: "View My Work",
+    href: "#portfolio",
+    color: "text-purple-600",
   },
   {
     icon: Globe,
     label: "Languages",
-    value: "English (C2), German (B1)",
+    value: "English (C1 Fluent), German (B1 Intermediate)",
     href: null,
     color: "text-purple-600",
   },
@@ -73,17 +81,17 @@ const contactInfo = [
 const availability = [
   {
     icon: CheckCircle,
-    text: "Available for full-time opportunities",
+    text: "Available for full-time and remote opportunities",
     color: "text-green-600",
   },
   {
     icon: Clock,
-    text: "Open to remote and hybrid work",
+    text: "Open to hybrid work arrangements across Europe",
     color: "text-blue-600",
   },
   {
     icon: Calendar,
-    text: "1 week notice period",
+    text: "Currently pursuing Master's - Flexible schedule",
     color: "text-orange-600",
   },
 ]
@@ -144,7 +152,7 @@ export default function ContactSection() {
       const result = await response.json()
 
       if (response.ok) {
-        toast.success('Message sent successfully! I\'ll get back to you soon.')
+        toast.success('Message sent successfully! I\'ll get back to you within 24 hours.')
         setFormData({
           name: "",
           email: "",
@@ -175,14 +183,14 @@ export default function ContactSection() {
           <motion.div variants={itemVariants} className="text-center space-y-4">
             <Badge variant="secondary" className="mb-4">
               <MessageCircle className="w-4 h-4 mr-2" />
-              Get In Touch
+              Let's Collaborate
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-balance">
-              Let's <span className="text-primary">Connect</span>
+              Ready to Transform Your <span className="text-primary">IT Operations?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-              I'm always interested in discussing new opportunities, sharing insights about IT security and automation,
-              or collaborating on innovative projects. Feel free to reach out!
+              Whether you need cloud infrastructure optimization, security automation, or enterprise-scale IT solutions - 
+              I'm here to help revolutionize your technology operations with AI-driven approaches.
             </p>
           </motion.div>
 
@@ -231,7 +239,7 @@ export default function ContactSection() {
 
               {/* Availability Status */}
               <div className="bg-card rounded-lg p-6 border border-primary/20">
-                <h4 className="text-xl font-bold text-foreground mb-4">Current Availability</h4>
+                <h4 className="text-xl font-bold text-foreground mb-4">Current Status</h4>
                 <div className="space-y-3">
                   {availability.map((item, index) => (
                     <motion.div
@@ -248,25 +256,25 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Quick Stats */}
+              {/* Quick Stats from Resume */}
               <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6 border border-primary/20">
-                <h4 className="text-xl font-bold text-foreground mb-4">Why Work With Me?</h4>
+                <h4 className="text-xl font-bold text-foreground mb-4">Impact & Achievements</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">4+</div>
+                    <div className="text-2xl font-bold text-primary">5+</div>
                     <div className="text-xs text-muted-foreground">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">95%+</div>
-                    <div className="text-xs text-muted-foreground">Resolution Rate</div>
+                    <div className="text-2xl font-bold text-primary">95%</div>
+                    <div className="text-xs text-muted-foreground">Automated Resolution</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">500+</div>
-                    <div className="text-xs text-muted-foreground">Tickets Resolved</div>
+                    <div className="text-xs text-muted-foreground">Endpoints Managed</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">99.5%</div>
-                    <div className="text-xs text-muted-foreground">Security Compliance</div>
+                    <div className="text-2xl font-bold text-primary">$2.3M+</div>
+                    <div className="text-xs text-muted-foreground">Infrastructure Value</div>
                   </div>
                 </div>
               </div>
@@ -278,7 +286,7 @@ export default function ContactSection() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Send className="w-5 h-5 text-primary" />
-                    Send Me a Message
+                    Let's Discuss Your Project
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -291,7 +299,7 @@ export default function ContactSection() {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="Your full name"
+                          placeholder=""
                           required
                         />
                       </div>
@@ -303,7 +311,7 @@ export default function ContactSection() {
                           type="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="your.email@example.com"
+                          placeholder=""
                           required
                         />
                       </div>
@@ -316,19 +324,19 @@ export default function ContactSection() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleInputChange}
-                        placeholder="What would you like to discuss?"
+                        placeholder=""
                         required
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">Project Details *</Label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Tell me about your project, opportunity, or question..."
+                        placeholder=""
                         rows={6}
                         required
                       />
@@ -340,7 +348,7 @@ export default function ContactSection() {
                     </Button>
 
                     <p className="text-xs text-muted-foreground text-center">
-                      I typically respond within 24 hours. For urgent matters, please call directly.
+                      I typically respond within 24 hours. For urgent IT support matters, please call directly.
                     </p>
                   </form>
                 </CardContent>
@@ -360,28 +368,31 @@ export default function ContactSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              © 2024 Muhammad Hammad. Built with Next.js, Tailwind CSS, and Framer Motion.
+              © 2024 Muhammad Hammad - IT Service Engineer. Built with Next.js, Tailwind CSS, and Framer Motion.
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com/in/Hammad"
+                href="https://linkedin.com/in/mhammad24"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/Hammad"
+                href="https://github.com/Muhammadhammad24"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:muhammad24997@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Send Email"
               >
                 <Mail className="w-5 h-5" />
               </a>

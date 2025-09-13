@@ -21,6 +21,9 @@ export const metadata: Metadata = {
       "Professional portfolio showcasing expertise in IT security, system administration, and enterprise infrastructure.",
     type: "website",
   },
+  icons: {
+    icon: '/favicon/shield.svg',
+  },
 }
 
 export default function RootLayout({
