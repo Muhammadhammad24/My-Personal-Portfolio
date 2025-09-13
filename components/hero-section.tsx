@@ -212,15 +212,7 @@ export default function HeroSection() {
 
                 {/* Floating Icons */}
                 {[
-                  { icon: "/icons/light-mode/linux.svg", delay: 0, radius: 120 },
-                  { icon: "/icons/dark-mode/pfsense.png", delay: 1, radius: 120 },
-                  { icon: "/icons/dark-mode/terraform.svg", delay: 2, radius: 120 },
-                  { icon: "/icons/dark-mode/OKTA_BIG.svg", delay: 3, radius: 120 },
-                  { icon: "/icons/light-mode/docker.svg", delay: 4, radius: 120 },
-                  { icon: "/icons/light-mode/kubernetes.svg", delay: 5, radius: 120 },
-                  { icon: "/icons/dark-mode/python.svg", delay: 6, radius: 120 },
-                  { icon: "/icons/light-mode/api.svg", delay: 7, radius: 120 },
-                  { icon: "/icons/dark-mode/jumpcloud-icon.svg", delay: 8, radius: 120 },
+                  
                   
                 ].map((item, index) => (
                   <motion.div

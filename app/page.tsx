@@ -10,6 +10,7 @@ import ProjectsSection from "@/components/projects-section"
 import ContactSection from "@/components/contact-section"
 import Navigation from "@/components/navigation"
 import ScrollToTop from "@/components/scroll-to-top"
+import InfiniteScrollingLogosAnimation from "@/components/moving-icons"
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false)
@@ -36,6 +37,7 @@ export default function HomePage() {
 
       <div className="space-y-0">
         <HeroSection />
+        <InfiniteScrollingLogosAnimation />
         <AboutSection />
         <ExperienceSection />
         <SkillsSection />
