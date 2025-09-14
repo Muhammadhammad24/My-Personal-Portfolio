@@ -22,7 +22,7 @@ const CompanyLogoData: Array<{ src: string; alt: string }> = [
     { src: "/icons/Kandji.svg", alt: "Kandji" },
     { src: "/icons/slack.svg", alt: "slack" },
     { src: "/icons/bash.svg", alt: "bash" },
-    { src: "/icons/Jamff.png", alt: "Jamf" },
+    { src: "/icons/jamff.png", alt: "Jamf" },
     { src: "/icons/jumpcloud.jpeg", alt: "Jumpcloud" },
     { src: "/icons/intune.svg", alt: "Intune" },
     { src: "/icons/ubuntu.svg", alt: "ubuntu" },
@@ -173,7 +173,7 @@ const InfiniteScrollingLogos = () => {
                 }
                 
                 .animate-scroll {
-                    animation: scroll 25s linear infinite;
+                    animation: scroll 13s linear infinite;
                     will-change: transform;
                 }
                 

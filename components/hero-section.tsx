@@ -100,7 +100,7 @@ export default function HeroSection() {
                     2000,
                     "Cloud Security Specialist",
                     2000,
-                    "DevSecOps Enthusiast",
+                    "DevSecOps",
                     2000,
                     "System Operation Engineer",
                     2000,
