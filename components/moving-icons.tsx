@@ -20,7 +20,7 @@ const CompanyLogoData: Array<{ src: string; alt: string }> = [
     { src: "/icons/Microsoft-365.svg", alt: "Microsoft-365" },
     { src: "/icons/cloudflare.svg", alt: "cloudflare" },
     { src: "/icons/Kandji.svg", alt: "Kandji" },
-    { src: "/icons/slack.svg", alt: "slack" },
+    { src: "/icons/Slack.svg", alt: "slack" },
     { src: "/icons/bash.svg", alt: "bash" },
     { src: "/icons/jamff.png", alt: "Jamf" },
     { src: "/icons/jumpcloud.jpeg", alt: "Jumpcloud" },
