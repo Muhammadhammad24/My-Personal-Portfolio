@@ -1,8 +1,7 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Image from "next/image"
-import { motion, useAnimationControls } from "framer-motion"
 
 const CompanyLogoData: Array<{ src: string; alt: string }> = [
     { src: "/icons/docker.svg", alt: "Docker" },
@@ -10,31 +9,28 @@ const CompanyLogoData: Array<{ src: string; alt: string }> = [
     { src: "/icons/linux.svg", alt: "Linux" },
     { src: "/icons/pfsense.png", alt: "pfSense" },
     { src: "/icons/terraform.svg", alt: "Terraform" },
-    { src: "/icons/OKTA_BIG.svg", alt: "Okta" },
+    { src: "/icons/oktaneww.jpeg", alt: "Okta" },
     { src: "/icons/python.svg", alt: "Python" },
     { src: "/icons/api.svg", alt: "API" },
-    { src: "/icons/jumpcloud-icon.svg", alt: "JumpCloud" },
+    { src: "/icons/fortinet.jpeg", alt: "Fortinet"},
+    { src: "/icons/GSuite.png", alt: "GSuite" },
+    { src: "/icons/confluence.svg", alt: "confluence" },
+    { src: "/icons/cisco.jpeg", alt: "cisco" },
+    { src: "/icons/jira.svg", alt: "jira" },
+    { src: "/icons/Microsoft-365.svg", alt: "Microsoft-365" },
+    { src: "/icons/cloudflare.svg", alt: "cloudflare" },
+    { src: "/icons/Kandji.svg", alt: "Kandji" },
+    { src: "/icons/slack.svg", alt: "slack" },
+    { src: "/icons/bash.svg", alt: "bash" },
+    { src: "/icons/Jamff.png", alt: "Jamf" },
+    { src: "/icons/jumpcloud.jpeg", alt: "Jumpcloud" },
+    { src: "/icons/intune.svg", alt: "Intune" },
+    { src: "/icons/ubuntu.svg", alt: "ubuntu" },
+    { src: "/icons/jenkins.jpeg", alt: "jenkins" },
+    { src: "/icons/aws.jpeg", alt: "Aws" },
 ]
 
 const InfiniteScrollingLogos = () => {
-    const [isHovered, setIsHovered] = useState(false)
-    const controls = useAnimationControls()
-
-    useEffect(() => {
-        if (isHovered) {
-            controls.stop()
-        } else {
-            controls.start({
-                translateX: "-50%",
-                transition: {
-                    duration: 10,
-                    ease: "linear",
-                    repeat: Number.POSITIVE_INFINITY,
-                },
-            })
-        }
-    }, [isHovered, controls])
-
     return (
         <div className="py-16 bg-background">
             <div className="container mx-auto px-4">
@@ -42,31 +38,156 @@ const InfiniteScrollingLogos = () => {
                     Technologies & <span className="text-primary">Tools</span>
                 </h3>
 
-                <div className="flex relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-16 before:bg-gradient-to-r before:from-background before:to-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-16 after:bg-gradient-to-l after:from-background after:to-transparent after:content-['']">
-                    <motion.div animate={controls} initial={{ translateX: 0 }} className="flex flex-none gap-12 pr-12">
-                        {[...new Array(2)].map((_, index) => (
-                            <React.Fragment key={index}>
-                                {CompanyLogoData.map(({ src, alt }) => (
-                                    <div
-                                        key={`${alt}-${index}`}
-                                        className="flex items-center justify-center p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 transition-colors duration-300"
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                    >
-                                        <Image
-                                            src={src || "/placeholder.svg"}
-                                            alt={alt}
-                                            className="h-8 w-auto flex-none opacity-70 hover:opacity-100 transition-opacity duration-300 filter dark:invert dark:brightness-110"
-                                            width={100}
-                                            height={32}
-                                        />
-                                    </div>
-                                ))}
-                            </React.Fragment>
+                <div className="relative overflow-hidden">
+                    {/* Gradient overlays */}
+                    <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+                    <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+                    
+                    {/* Scrolling container */}
+                    <div className="flex animate-scroll gap-6">
+                        {/* First set of logos */}
+                        {CompanyLogoData.map(({ src, alt }, index) => (
+                            <div
+                                key={`first-${index}`}
+                                className="logo-container group"
+                            >
+                                <div className="logo-wrapper">
+                                    <Image
+                                        src={src || "/placeholder.svg"}
+                                        alt={alt}
+                                        width={48}
+                                        height={48}
+                                        className="logo-image"
+                                        style={{
+                                            objectFit: 'contain',
+                                            maxWidth: '100%',
+                                            height: 'auto'
+                                        }}
+                                    />
+                                </div>
+                            </div>
                         ))}
-                    </motion.div>
+                        
+                        {/* Duplicate set for seamless loop */}
+                        {CompanyLogoData.map(({ src, alt }, index) => (
+                            <div
+                                key={`second-${index}`}
+                                className="logo-container group"
+                            >
+                                <div className="logo-wrapper">
+                                    <Image
+                                        src={src || "/placeholder.svg"}
+                                        alt={alt}
+                                        width={48}
+                                        height={48}
+                                        className="logo-image"
+                                        style={{
+                                            objectFit: 'contain',
+                                            maxWidth: '100%',
+                                            height: 'auto'
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
+            
+            <style jsx>{`
+                .logo-container {
+                    flex-shrink: 0;
+                    width: 72px;
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    padding: 12px;
+                    transition: all 0.3s ease;
+                    backdrop-filter: blur(6px);
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                }
+                
+                .logo-container:hover {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: #22c55e;
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                }
+                
+                .logo-container::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, 
+                        transparent, 
+                        rgba(255, 255, 255, 0.15), 
+                        transparent
+                    );
+                    transition: left 0.4s ease;
+                    z-index: 1;
+                }
+                
+                .logo-container:hover::before {
+                    left: 100%;
+                }
+                
+                .logo-wrapper {
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 2;
+                }
+                
+                .logo-image {
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: contain !important;
+                    transition: all 0.3s ease;
+                    filter: brightness(1) contrast(1.1) saturate(1.2);
+                }
+                
+                .group:hover .logo-image {
+                    filter: brightness(1.1) contrast(1.2) saturate(1.4);
+                    transform: scale(1.05);
+                }
+                
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(calc(-50% - 12px));
+                    }
+                }
+                
+                .animate-scroll {
+                    animation: scroll 25s linear infinite;
+                    will-change: transform;
+                }
+                
+                /* Pause animation on hover over any icon */
+                .animate-scroll:hover {
+                    animation-play-state: paused;
+                }
+                
+                /* Ensure smooth animation performance */
+                .animate-scroll * {
+                    backface-visibility: hidden;
+                    perspective: 1000px;
+                }
+            `}</style>
         </div>
     )
 }

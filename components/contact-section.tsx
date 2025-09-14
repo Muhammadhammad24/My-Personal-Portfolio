@@ -62,13 +62,7 @@ const contactInfo = [
     href: "https://github.com/Muhammadhammad24",
     color: "text-gray-700",
   },
-  {
-    icon: ExternalLink,
-    label: "Portfolio",
-    value: "View My Work",
-    href: "#portfolio",
-    color: "text-purple-600",
-  },
+ 
   {
     icon: Globe,
     label: "Languages",
