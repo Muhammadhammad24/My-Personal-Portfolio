@@ -187,12 +187,12 @@ export default function AboutSection() {
                 <h4 className="text-xl font-bold text-foreground mb-4">Education</h4>
                 <div className="space-y-3">
                   <div>
-                    <div className="font-semibold text-foreground">Master of Science in Data Science & Informatik</div>
+                    <div className="font-semibold text-foreground">Master of Science in Mathematik Data Science & Informatik</div>
                     <div className="text-sm text-muted-foreground">Georg-August-Universität Göttingen, Germany</div>
                     <div className="text-sm text-primary">2023 – 2025</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Bachelor of Science in Computer Science</div>
+                    <div className="font-semibold text-foreground">Bachelor of Science in Computational Mathematics</div>
                     <div className="text-sm text-muted-foreground">University of Karachi, Pakistan</div>
                     <div className="text-sm text-primary">2016 – 2019</div>
                   </div>
